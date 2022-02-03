@@ -43,7 +43,7 @@ const PokeList = ({ favHandler, favourites }) => {
 		<div>
 			<Container>
 				<Row
-					xs={2}
+					xs={1}
 					md={4}
 					lg={5}
 					className="justify-content-between my-5 d-flex gap-3"
@@ -62,12 +62,12 @@ const PokeList = ({ favHandler, favourites }) => {
 							/>
 						))}
 				</Row>
+				<div className="d-grid">
+					<Button variant="outline-secondary" onClick={getPokemons}>
+						Show more
+					</Button>
+				</div>
 			</Container>
-			<div className="btn_wrapper">
-				<Button variant="outline-secondary" size="sm" onClick={getPokemons}>
-					Show more &gt;
-				</Button>
-			</div>
 		</div>
 	);
 };

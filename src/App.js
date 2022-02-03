@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import PokeList from './pages/PokeList';
 import Layout from './pages/Layout';
-import PokePage from './pages/PokePage';
+import PokePage from './components/PokePage';
 import Favourites from './components/Favourites';
 
 const App = () => {
@@ -38,9 +38,13 @@ const App = () => {
 			);
 			setFavourites(newFavourites);
 		}
-		console.log('clicked');
-		console.log(favourites);
 	};
+
+	const removeFavs = () => {
+		localStorage.removeItem('favourites');
+		setFavourites([]);
+	};
+
 	return (
 		<div>
 			<BrowserRouter>
@@ -53,13 +57,17 @@ const App = () => {
 								<PokeList favHandler={favHandler} favourites={favourites} />
 							}
 						/>
-						<Route path="pokemons/:pokemonName" element={<PokePage />} />
 						<Route
 							path="favourites"
 							element={
-								<Favourites favHandler={favHandler} favourites={favourites} />
+								<Favourites
+									favHandler={favHandler}
+									favourites={favourites}
+									removeFavs={removeFavs}
+								/>
 							}
 						/>
+						<Route path="/:pokemonName" element={<PokePage />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

@@ -1,10 +1,5 @@
-.poke_image {
-	max-height: 150px;
-	max-width: auto;
-}
-
 main {
-	height: calc(100vh - 56px);
+	height: calc(100vh - 112px);
 }
 
 .hero {
@@ -16,10 +11,4 @@ main {
 
 h1 {
 	background-color: orange;
-}
-
-.btn_wrapper {
-	display: flex;
-	justify-content: center;
-	padding: 2rem;
 }
