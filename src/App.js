@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import Home from './pages/Home';
 import PokeList from './pages/PokeList';
 import Layout from './pages/Layout';

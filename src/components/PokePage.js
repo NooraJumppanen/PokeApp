@@ -22,8 +22,6 @@ const PokePage = () => {
 			.then((response) => {
 				setSinglePoke(response.data);
 				setIsLoading(false);
-				console.log(response.data);
-				console.log(singlePoke);
 			});
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);

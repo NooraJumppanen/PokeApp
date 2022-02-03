@@ -5,7 +5,6 @@ import PokeCard from './PokeCard';
 import Button from 'react-bootstrap/Button';
 
 const Favourites = ({ favHandler, favourites, removeFavs }) => {
-	console.log(favourites);
 	return (
 		<Container className="mt-5">
 			{favourites.length === 0 && <h4>The favourites list is empty</h4>}
